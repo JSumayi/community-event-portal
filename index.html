@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Local Community Event Portal</title>
+
+  <!-- Internal CSS -->
+  <style>
+    body {
+      background: #f0f0f0 url('https://source.unsplash.com/1600x900/?community,people') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    html {
+      background-color: #cccccc;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      padding: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .eventCard {
+      background: white;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    table {
+      background: white;
+      width: 80%;
+      margin: 20px 0;
+      border-collapse: collapse;
+    }
+
+    table th, table td {
+      border: 1px solid black;
+      padding: 10px;
+    }
+
+    form input {
+      margin: 5px;
+      padding: 5px;
+    }
+  </style>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <h1 style="color:red;" id="mainHeader">Welcome to the Local Event Portal</h1>
+
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Events</a></li>
+      <li><a href="#">Gallery</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <h2>Upcoming Events</h2>
+    <div class="eventCard">
+      <h3>Tree Plantation Drive</h3>
+      <p>Join us to make our town greener.</p>
+    </div>
+    <div class="eventCard">
+      <h3>Clean-Up Marathon</h3>
+      <p>Let's clean our beach together.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Event Gallery</h2>
+    <table>
+      <tr>
+        <th>Event</th>
+        <th>Photo</th>
+      </tr>
+      <tr>
+        <td>Fest 2024</td>
+        <td><img src="images/Fest.png" alt="Fest" width="300" height="200"></td>
+      </tr>
+      <tr>
+        <td>Tech Meetup</td>
+        <td><img src="images/TechMeet.png" alt="Tech" width="300" height="200"></td>
+      </tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Register for Events</h2>
+    <section id="eventList"></section>
+
+    <form id="eventForm">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <button type="submit">Register</button>
+    </form>
+  </section>
+
+  <section class="news">
+    <h2>Community Bulletin</h2>
+    <p>
+      Our community portal offers regular updates on social drives, awareness camps, environmental campaigns,
+      and more. Stay tuned for real-time updates.
+    </p>
+  </section>
+
+  <!-- JavaScript -->
+  <script src="main.js"></script>
+
+</body>
+</html>
